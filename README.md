@@ -248,4 +248,4 @@ If you use NyayaSetu or its grounded retrieval architecture in academic work, pl
 *NyayaSetu is an open-source civic legal information research platform designed solely for educational, research, and preliminary orientation purposes. It does not provide legal advice, does not establish an advocate-client relationship, and cannot guarantee judicial or administrative outcomes. For formal legal representation, citizens must consult a qualified advocate enrolled with their State Bar Council or visit their local District Legal Services Authority (DLSA) under the Legal Services Authorities Act, 1987.*
 
 ---
-**License:** MIT License. © 2026 Yashraj Dubey & NyayaSetu Contributors.
+**License:** MIT License. © 2026 Yashraj Gupta & NyayaSetu Contributors.
