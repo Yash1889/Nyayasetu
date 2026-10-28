@@ -2,7 +2,7 @@
 ### A Risk-Aware Retrieval-Augmented Framework for Evidence-Grounded Legal Information and Pre-Litigation Triage
 
 > **Research Paper Implementation & Artifact Repository**  
-> **Authors:** Yashraj Dubey et al. (2026)  
+> **Authors:** Yashraj Gupta et al. (2026)  
 > **Corpus Coverage:** Republic of India — 10 Central Acts (BNS 2023, BNSS 2023, BSA 2023, CPA 2019, IT Act 2000, LSAA 1987, NI Act 1881, PWDVA 2005, RTI Act 2005, TPA 1882).  
 > **Repository:** [https://github.com/Yash1889/Nyayasetu.git](https://github.com/Yash1889/Nyayasetu.git)
 
