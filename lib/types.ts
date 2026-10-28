@@ -103,6 +103,7 @@ export interface TriageResult {
   route: TriageRoute;
   assessed_context: LegalContext;
   evidence_status: EvidenceStatus;
+  retrieved_passages?: RetrievedPassage[];
   grounded_response?: GroundedLegalResponse;
   emergency_guidance?: {
     alert_title: string;
