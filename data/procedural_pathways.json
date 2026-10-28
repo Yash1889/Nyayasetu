@@ -1,0 +1,166 @@
+[
+  {
+    "id": "pathway_cheque_bounce",
+    "title": "Dishonour of Cheque (Section 138 Negotiable Instruments Act, 1881)",
+    "category": "Commercial & Negotiable Instruments",
+    "governing_statutes": ["NI Act 1881 §138", "NI Act 1881 §141", "NI Act 1881 §142", "BNSS 2023 §223"],
+    "statutory_prerequisites": [
+      "Cheque presented to bank within validity period (3 months from issuance date)",
+      "Cheque returned unpaid with official bank return memo stating 'Insufficient Funds' or exceeding arranged amount",
+      "Notice demand must be for the exact cheque amount or legally enforceable debt"
+    ],
+    "procedural_steps": [
+      {
+        "step_number": 1,
+        "title": "Obtain Official Bank Return Memo",
+        "statutory_deadline": "Within 3 months of cheque issuance",
+        "description": "Secure the original bounced cheque along with the stamped Bank Return Memo stating the specific reason for dishonour.",
+        "evidence_required": ["Original signed cheque", "Stamped Bank Return Memo with date and cheque return code"]
+      },
+      {
+        "step_number": 2,
+        "title": "Serve Statutory Legal Demand Notice",
+        "statutory_deadline": "Strictly within 30 days of receiving the bank memo",
+        "description": "Issue a formal demand notice to the drawer demanding payment of the cheque amount. Must be sent via Registered Post with A/D, Speed Post, or verifiable email/WhatsApp.",
+        "evidence_required": ["Copy of Legal Demand Notice signed by complainant/advocate", "Postal speed post receipts", "India Post online delivery tracking report showing delivery/refusal"]
+      },
+      {
+        "step_number": 3,
+        "title": "Wait for 15-Day Statutory Cure Period",
+        "statutory_deadline": "15 days from date of receipt of notice by drawer",
+        "description": "The drawer is granted a statutory window of 15 days to make payment. No criminal complaint can be filed before this 15-day period expires.",
+        "evidence_required": ["Proof of service date (India Post tracking or postal acknowledgment card)"]
+      },
+      {
+        "step_number": 4,
+        "title": "File Criminal Complaint before Judicial Magistrate",
+        "statutory_deadline": "Within 30 days starting on Day 16 after notice receipt",
+        "description": "If payment is not made within 15 days, cause of action arises on Day 16. File a criminal complaint under Section 138/142 before the Judicial Magistrate First Class / Metropolitan Magistrate in whose jurisdiction the payee bank account is located.",
+        "evidence_required": ["Original cheque", "Bank memo", "Office copy of notice", "Postal receipt & tracking", "Affidavit of evidence under Section 145 NI Act"]
+      }
+    ],
+    "statutory_relief": "Imprisonment up to 2 years, or fine up to twice the cheque amount, or both; plus interim compensation up to 20% under Section 143A.",
+    "forum": "Judicial Magistrate First Class / Metropolitan Magistrate Court"
+  },
+  {
+    "id": "pathway_consumer_deficiency",
+    "title": "Consumer Deficiency & Unfair Trade Practice (Consumer Protection Act, 2019)",
+    "category": "Consumer Rights",
+    "governing_statutes": ["CPA 2019 §2(11)", "CPA 2019 §34", "CPA 2019 §35", "CPA 2019 §38"],
+    "statutory_prerequisites": [
+      "Goods or services purchased for consideration (personal use, not commercial resale)",
+      "Deficiency in service, defective product, or misleading advertisement",
+      "Dispute brought within limitation period of 2 years from date on which cause of action arose"
+    ],
+    "procedural_steps": [
+      {
+        "step_number": 1,
+        "title": "Collate Contemporaneous Evidence",
+        "statutory_deadline": "Immediately upon defect discovery",
+        "description": "Preserve all invoices, proof of payment, warranty cards, delivery notes, and digital customer support tickets/chats.",
+        "evidence_required": ["Tax invoice / Cash receipt", "Warranty card / Guarantee terms", "Email / Chat history with customer care", "Photographs / Video of defective product"]
+      },
+      {
+        "step_number": 2,
+        "title": "Pre-Litigation Written Notice to Trader / Manufacturer",
+        "statutory_deadline": "Recommended 15-30 days prior to filing",
+        "description": "Serve a formal grievance notice demanding repair, replacement, or refund with compensation for harassment within 15 days.",
+        "evidence_required": ["Copy of grievance email/letter", "Proof of dispatch / delivery acknowledgment"]
+      },
+      {
+        "step_number": 3,
+        "title": "Lodge Pre-Litigation Grievance on National Consumer Helpline (NCH)",
+        "statutory_deadline": "Optional immediate pre-litigation step",
+        "description": "Register complaint on consumerhelpline.gov.in or dial 1915. NCH facilitates direct conciliation with registered convergent companies without court fees.",
+        "evidence_required": ["NCH Docket / Ticket ID", "Company response on portal"]
+      },
+      {
+        "step_number": 4,
+        "title": "File Formal Consumer Complaint (e-Daakhil / District Commission)",
+        "statutory_deadline": "Within 2 years from date of cause of action (Section 69)",
+        "description": "File online via edaakhil.nic.in or physically at District Consumer Commission where you reside. No court fee for claims up to ₹5 lakh.",
+        "evidence_required": ["Complaint petition with index and synopsis", "Affidavit verifying facts", "Supporting documents bundle", "Fee payment receipt (if claim > ₹5 lakh)"]
+      }
+    ],
+    "statutory_relief": "Removal of defect, replacement of goods, refund of price paid, compensation for injury/harassment, and punitive damages.",
+    "forum": "District Consumer Disputes Redressal Commission (claims up to ₹50 Lakh)"
+  },
+  {
+    "id": "pathway_cyber_fraud",
+    "title": "Cyber Financial Fraud & Phishing Recovery (IT Act, 2000 & BNS, 2023)",
+    "category": "Cyber & Financial Crime",
+    "governing_statutes": ["IT Act 2000 §66C", "IT Act 2000 §66D", "BNS 2023 §318", "BNSS 2023 §173"],
+    "statutory_prerequisites": [
+      "Unauthorized debit or digital financial loss without voluntary informed consent",
+      "Prompt reporting to financial institutions to trigger RBI limited liability guidelines"
+    ],
+    "procedural_steps": [
+      {
+        "step_number": 1,
+        "title": "Immediate Golden Hour Emergency Call to 1930",
+        "statutory_deadline": "Within 2 to 4 hours of unauthorized transaction",
+        "description": "Dial National Cyber Financial Fraud Helpline 1930 immediately. Operator inputs transaction details into the Citizen Financial Cyber Fraud Reporting and Management System (CFCFRMS) to freeze the transaction in transit across banking APIs.",
+        "evidence_required": ["Transaction reference ID / UTR number", "Sender and beneficiary bank account details", "Exact timestamp of deduction", "Caller / SMS fraud details"]
+      },
+      {
+        "step_number": 2,
+        "title": "Notify Bank to Block Accounts / Enforce RBI Zero-Liability",
+        "statutory_deadline": "Within 3 working days of transaction",
+        "description": "Formally inform the bank branch and grievance officer in writing/email. Under RBI Circular RBI/2017-18/15, customer liability is zero if unauthorized electronic transaction is reported within three working days.",
+        "evidence_required": ["Bank acknowledgment copy / email ticket", "Bank account statement showing unauthorized debit"]
+      },
+      {
+        "step_number": 3,
+        "title": "Register Detailed Complaint on National Cyber Crime Portal",
+        "statutory_deadline": "Within 24 hours",
+        "description": "File complaint at cybercrime.gov.in. System generates an official Acknowledgement Number necessary for police station FIR registration.",
+        "evidence_required": ["Cybercrime portal acknowledgement PDF", "Screenshots of phishing URL, fake app, WhatsApp chat, or fake caller ID"]
+      },
+      {
+        "step_number": 4,
+        "title": "Lodge Zero-FIR / Regular FIR at Cyber Police Station",
+        "statutory_deadline": "Upon portal acknowledgement",
+        "description": "Visit local Cyber Crime Police Station or nearest police station. Section 173(1) BNSS mandates immediate Zero-FIR registration for cognizable cyber fraud.",
+        "evidence_required": ["Copy of cyber portal complaint", "Certified bank statement", "Proof of notification to bank"]
+      }
+    ],
+    "statutory_relief": "Inter-bank fund freeze and restitution; criminal prosecution under Sections 66C/66D IT Act (up to 3 years imprisonment) and Section 318 BNS (cheating).",
+    "forum": "Cyber Police Station / Magistrate Court / Adjudicating Officer under Section 46 IT Act"
+  },
+  {
+    "id": "pathway_tenancy_deposit",
+    "title": "Security Deposit Recovery & Unlawful Eviction (Transfer of Property Act, 1882)",
+    "category": "Property & Tenancy",
+    "governing_statutes": ["TPA 1882 §106", "TPA 1882 §108(B)", "BNS 2023 §316", "Specific Relief Act 1963 §6"],
+    "statutory_prerequisites": [
+      "Lawful tenancy established through written lease agreement or rent receipts",
+      "Premises vacated in accordance with agreed notice period or statutory notice",
+      "Keys handed over or tendered in writing"
+    ],
+    "procedural_steps": [
+      {
+        "step_number": 1,
+        "title": "Document Handover Condition and Key Return",
+        "statutory_deadline": "On day of vacating",
+        "description": "Photograph/videotape all rooms, fixtures, and utility meters. Obtain signed handover inspection slip or send recorded delivery email confirming key return.",
+        "evidence_required": ["Signed rental agreement", "Bank proof of deposit paid", "Handover photographs/video", "Key receipt or written intimation of key dispatch"]
+      },
+      {
+        "step_number": 2,
+        "title": "Serve Formal Statutory Legal Demand Notice",
+        "statutory_deadline": "Upon refusal or after agreed refund window (typically 7-15 days)",
+        "description": "Send formal legal notice demanding refund of undisputed security deposit within 15 days, specifying interest at 12-18% per annum from date of vacation.",
+        "evidence_required": ["Copy of legal notice", "Speed Post receipt and India Post delivery tracking record"]
+      },
+      {
+        "step_number": 3,
+        "title": "Approach Rent Authority / Consumer Commission / Civil Court",
+        "statutory_deadline": "Within 3 years limitation period for money recovery",
+        "description": "Depending on State Tenancy Act: file application before local Rent Authority / Rent Tribunal; or District Consumer Commission (if commercial landlord/co-living entity); or summary suit under Order XXXVII CPC for debt recovery.",
+        "evidence_required": ["Rental agreement", "Bank statement of deposit", "Notice with delivery proof", "Electricity/maintenance clearance receipts"]
+      }
+    ],
+    "statutory_relief": "Full refund of deposit with statutory interest; damages for wrongful retention; injunctive relief against illegal dispossession.",
+    "forum": "Rent Controller / Tribunal or Civil Court or Consumer Commission"
+  }
+]

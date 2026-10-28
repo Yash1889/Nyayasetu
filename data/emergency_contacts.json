@@ -1,0 +1,88 @@
+[
+  {
+    "number": "112",
+    "name": "National Emergency Response Support System (ERSS)",
+    "description": "Unified 24/7 all-in-one emergency helpline for Police, Fire, Ambulance, and Disaster assistance across India.",
+    "scope": "All-India (28 States, 8 UTs)",
+    "is_national": true,
+    "authority": "Ministry of Home Affairs (MHA), Government of India",
+    "official_url": "https://112.gov.in/",
+    "verification_date": "2026-10-28",
+    "direct_dial": "tel:112",
+    "badge": "Universal Emergency"
+  },
+  {
+    "number": "181",
+    "name": "Women Helpline (WHL) - Mission Shakti",
+    "description": "24/7 toll-free emergency and crisis intervention for women affected by violence, harassment, or domestic abuse; linked to One Stop Centres (OSCs).",
+    "scope": "35 States & Union Territories",
+    "is_national": true,
+    "authority": "Ministry of Women and Child Development (MWCD), Government of India",
+    "official_url": "https://wcd.nic.in/",
+    "verification_date": "2026-10-28",
+    "direct_dial": "tel:181",
+    "badge": "Women Crisis & Shelter"
+  },
+  {
+    "number": "1930",
+    "name": "National Cyber Financial Fraud Helpline",
+    "description": "Immediate reporting of unauthorized online banking fraud, UPI scams, and digital financial theft to freeze stolen funds in transit.",
+    "scope": "All-India",
+    "is_national": true,
+    "authority": "Indian Cyber Crime Coordination Centre (I4C), Ministry of Home Affairs",
+    "official_url": "https://cybercrime.gov.in/",
+    "verification_date": "2026-10-28",
+    "direct_dial": "tel:1930",
+    "badge": "Cyber & Banking Fraud"
+  },
+  {
+    "number": "15100",
+    "name": "National Legal Aid Toll-Free Helpline (NALSA)",
+    "description": "Official 24/7 free legal assistance helpline connecting citizens to DLSA legal aid defense counsels and Lok Adalat services.",
+    "scope": "All-India",
+    "is_national": true,
+    "authority": "National Legal Services Authority, Ministry of Law & Justice",
+    "official_url": "https://nalsa.gov.in/",
+    "verification_date": "2026-10-28",
+    "direct_dial": "tel:15100",
+    "badge": "Free Legal Aid"
+  },
+  {
+    "number": "1090",
+    "name": "Women Power Line (WPL 1090) - UP Police",
+    "description": "Dedicated women protection cell against stalking, vulgar phone calls, eve-teasing, and cyber harassment. State-specific to Uttar Pradesh.",
+    "scope": "Uttar Pradesh Only",
+    "is_national": false,
+    "state": "Uttar Pradesh",
+    "authority": "Uttar Pradesh Police, Government of Uttar Pradesh",
+    "official_url": "https://uppolice.gov.in/",
+    "verification_date": "2026-10-28",
+    "direct_dial": "tel:1090",
+    "badge": "State Specific: UP Police"
+  },
+  {
+    "number": "1091",
+    "name": "State Police Women Helpline",
+    "description": "Direct police response unit for women in distress. Active in Delhi (011-23317004), Tamil Nadu, Haryana, and Karnataka.",
+    "scope": "Selected States (Delhi, TN, Haryana, Karnataka)",
+    "is_national": false,
+    "state": "Delhi / Haryana / Karnataka / Tamil Nadu",
+    "authority": "Respective State Police Departments",
+    "official_url": "https://delhipolice.gov.in/",
+    "verification_date": "2026-10-28",
+    "direct_dial": "tel:1091",
+    "badge": "State Police Women Unit"
+  },
+  {
+    "number": "1098",
+    "name": "Childline 1098 (Child Emergency)",
+    "description": "Emergency outreach service for children in need of care and protection, integrated under the ERSS 112 platform.",
+    "scope": "All-India",
+    "is_national": true,
+    "authority": "Ministry of Women and Child Development",
+    "official_url": "https://wcd.nic.in/",
+    "verification_date": "2026-10-28",
+    "direct_dial": "tel:1098",
+    "badge": "Child Protection"
+  }
+]
