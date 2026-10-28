@@ -149,6 +149,7 @@ export async function runTriagePipeline(query: TriageQuery): Promise<TriageResul
     assessed_context: riskAnalysis.context,
     evidence_status: gate.status,
     grounded_response: validation.sanitizedResponse,
+    retrieved_passages: passages,
     latency_ms: Date.now() - startTime,
     provider_used: genOutput.provider
   };

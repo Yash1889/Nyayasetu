@@ -12,9 +12,16 @@ export interface RiskAnalysis {
 const EMERGENCY_PATTERNS: { pattern: RegExp; signal: string }[] = [
   // Active physical violence in progress
   { pattern: /\b(beating|hitting|strangling|attacking|killing|stabbing)\s+(me|us|her|him|my)\b/i, signal: "Active physical assault" },
-  { pattern: /\b(locked\s+in|trapped|cannot\s+escape|held\s+hostage|confined)\b/i, signal: "Physical restraint / Confinement" },
-  { pattern: /\b(he|she|they)\s+(has|have|holding)\s+(a\s+knife|a\s+gun|weapon|acid|petrol)\b/i, signal: "Weapon / Lethal threat" },
-  { pattern: /\b(in\s+immediate\s+danger|save\s+me|help\s+me\s+now|call\s+police\s+now)\b/i, signal: "Urgent physical safety cry" },
+  // Physical restraint — also covers "locked me in a room"
+  { pattern: /\b(locked\s+(me|us|her|him|them)\s+in|locked\s+in|trapped|cannot\s+escape|held\s+hostage|confined)\b/i, signal: "Physical restraint / Confinement" },
+  // Weapon / lethal threat — subject holding weapon
+  { pattern: /\b(he|she|they)\s+(has|have|is\s+holding|holding)\s+(a\s+knife|a\s+gun|weapon|acid|petrol|a\s+lighter)\b/i, signal: "Weapon / Lethal threat" },
+  // Weapon threat via stabbing or explicit threat phrase
+  { pattern: /\b(threatening\s+to\s+stab|going\s+to\s+stab|will\s+stab)\b/i, signal: "Stabbing threat" },
+  // Flammable / arson weapon attack
+  { pattern: /\b(threw\s+petrol|poured\s+petrol|threw\s+acid|poured\s+acid)\s+(on\s+(me|us|her|him))?\b/i, signal: "Flammable / corrosive weapon attack" },
+  { pattern: /\b(holding\s+a\s+lighter|lighter\s+and\s+petrol|set\s+me\s+on\s+fire)\b/i, signal: "Imminent arson / fire threat" },
+  { pattern: /\b(in\s+immediate\s+danger|save\s+me|help\s+me\s+now|call\s+police\s+now|send\s+police\s+now)\b/i, signal: "Urgent physical safety cry" },
   // Suicide / Self-harm
   { pattern: /\b(want\s+to\s+die|commit\s+suicide|end\s+my\s+life|kill\s+myself|cannot\s+live\s+anymore)\b/i, signal: "Self-harm / Suicide risk" },
   // Hindi / Hinglish emergency cries

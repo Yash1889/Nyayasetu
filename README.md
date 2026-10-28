@@ -53,25 +53,51 @@ flowchart TD
 
 The following empirical results were measured on a Linux x86_64 production testbench and reflect the quantitative findings reported in the research paper:
 
-### 3.1 Pipeline Component Latency & Performance
+### 3.1 Measured Retrieval Performance
 
-| Pipeline Stage | Implementation | Mean Latency | Safety / Precision | Notes |
-| :--- | :--- | :--- | :--- | :--- |
-| **Emergency Risk Router** | Deterministic Keyword & Regex Automaton | **2.1 ms** | **100% Recall** (0 False Negatives on distress) | Completely bypasses LLM; executes in browser / edge route |
-| **Hybrid Retriever** | BM25 + Reciprocal Rank Fusion | **8.4 ms** | **Top-3 Precision: 100%** on seed queries | Evaluated across 26 primary statutory provisions |
-| **Savings Clause Resolver** | Temporal Lexical & Date Validator | **1.2 ms** | **100% Accuracy** on cutoff date | Enforces Sec 358 BNS / Sec 531 BNSS (July 1, 2024 threshold) |
-| **Evidence Sufficiency Gate** | Multi-factor Thresholding | **1.2 ms** | Zero false-allow on vacuous input | Catches empty queries, missing dates, and jurisdictional gaps |
-| **Groq LLM Generation** | `openai/gpt-oss-120b` (JSON Mode) | **2.34 s** | Zero hallucinated citation IDs | Deep statutory reasoning, low temperature (0.1) |
-| **Groq Fast Fallback** | `qwen/qwen3.8-27b` (JSON Mode) | **1.51 s** | Zero hallucinated citation IDs | High-speed multi-lingual secondary LLM fallback |
-| **Deterministic Fallback Engine** | Offline Gazette Synthesizer | **8.6 ms** | **100% Grounding Guarantee** | Operates without network connectivity or API tokens |
-| **Output Validator** | Sourced Citation Whitelist Filter | **3.8 ms** | 100% Rejection of unknown IDs | Discards any section ID not in retrieved context |
+Evaluated on a **35-query benchmark** (`docs/research/evaluation/retrieval_benchmark.jsonl`) independently constructed across all 10 Acts. Corpus: **26 seed provisions**. Retriever: BM25 lexical + Jaccard-proxy dense scoring + Reciprocal Rank Fusion (no neural embeddings).
 
-### 3.2 Citation Fidelity & Grounding Verification
+| Metric | Value |
+| :--- | :--- |
+| Hit@1 (at least 1 expected provision at rank 1) | **68.57%** (24/35) |
+| Hit@3 (at least 1 expected provision in top 3) | **82.86%** (29/35) |
+| Hit@5 (at least 1 expected provision in top 5) | **91.43%** (32/35) |
+| Mean Reciprocal Rank (MRR) | **0.7529** |
+| Mean Recall@3 | 76.67% |
+| Mean Precision@3 | 36.19% (standard IR definition: fraction of top-3 that are relevant) |
 
-In automated adversarial tests across multi-domain queries (Consumer Protection, Cheque Bounce, Tenancy, Cyber Fraud, Domestic Violence):
-- **Hallucinated Provision Rate:** **0.0%** (All generated citations correspond to verified India Code legislative IDs).
-- **URL Provenance Accuracy:** **100.0%** (Every citation includes direct gazette hyperlink to `https://www.indiacode.nic.in`).
-- **Deterministic Offline Guarantee:** If external API calls fail or exceed the 20-second threshold, the deterministic engine delivers a fully cited statutory roadmap in under **25 milliseconds**.
+> 6 of 35 queries missed Hit@3 — all attributable to provisions not present in the 26-provision seed corpus or synonym gaps in the lexical retriever. See full failure analysis in [`docs/research/evaluation/NYAYASETU_EMPIRICAL_EVALUATION.md`](docs/research/evaluation/NYAYASETU_EMPIRICAL_EVALUATION.md).
+
+### 3.2 Measured Risk Router Performance
+
+Evaluated on a **30-case offline dataset** (`docs/research/evaluation/risk_router_results.csv`), 13 emergencies / 17 non-emergencies.
+
+| Metric | Value |
+| :--- | :--- |
+| Emergency Recall | **100.00%** (13/13 TP, 0 FN) |
+| Emergency Precision | **100.00%** (0 FP) |
+| Specificity | **100.00%** |
+| F1-Score | **1.0000** |
+
+> Two patterns were fixed post-initial-evaluation (stabbing threat; petrol/arson language). All 46 tests pass after the fix. N=30 is not a production safety certification; independent red-teaming is required.
+
+### 3.3 Measured Latency
+
+N=50 in-process offline trials (5 warmup discarded). HTTP and serialization overhead not included in offline figures.
+
+| Component | Median | p95 |
+| :--- | :--- | :--- |
+| Hybrid Retrieval (isolated, in-process) | **0.37 ms** | 0.68 ms |
+| Deterministic Pipeline E2E (in-process) | **0.41 ms** | 0.72 ms |
+| Live Groq API E2E (3 pre-rate-limit trials) | ~1.5 – 3 s | — |
+
+### 3.4 Citation Fidelity
+
+- **Mechanistic existence (automated):** **105 / 105 (100%)** — all citations from the deterministic engine reference provision IDs that were in the retrieval context.
+- **Legal substantiveness:** ⚠ **Pending human legal review** — mechanistic existence does not certify legal accuracy.
+
+> **Full reproducible evaluation:** [`docs/research/evaluation/NYAYASETU_EMPIRICAL_EVALUATION.md`](docs/research/evaluation/NYAYASETU_EMPIRICAL_EVALUATION.md)
+
 
 ---
 
@@ -125,7 +151,7 @@ In automated adversarial tests across multi-domain queries (Consumer Protection,
   - Warm Parchment (`#FAF7F2`): Contrast-optimized civic background.
   - Alert Amber / Vermilion: Clear risk and emergency indications.
 - **Icons:** Lucide React.
-- **Testing:** Vitest with 100% passing test coverage across engine modules (40/40 tests).
+- **Testing:** Vitest with 100% passing test coverage across engine modules (**46/46 tests**, 9 test files).
 
 ---
 

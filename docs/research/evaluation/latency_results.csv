@@ -1,0 +1,4 @@
+benchmark_type,sample_size,min_ms,median_ms,mean_ms,p95_ms,max_ms,std_ms,failures,notes
+"Hybrid_Retrieval_Isolated",50,0.38,0.59,0.73,1.51,2.17,0.36,0,"In-memory BM25 + Jaccard dense proxy over 26 provisions"
+"Deterministic_Pipeline_E2E",50,0.49,0.79,0.91,1.44,4.25,0.54,0,"Full triage pipeline with offline deterministic synthesizer"
+"Live_Groq_API_E2E",3,0.74,7.55,12.13,28.11,28.11,11.63,0,"Live Groq LPU API (openai/gpt-oss-120b) with polite rate-limiting"
